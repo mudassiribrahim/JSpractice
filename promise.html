@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function Products (){
+        return[
+        {
+            productName : 'Burger',
+            price :  900
+        },
+        {
+            productName : 'Pizza',
+            price : 1200
+        },
+        {
+            productName : 'Donar',
+            price: 500
+        }
+     ];}
+
+       function getByPrice (productprice){
+       const prices = Products();
+       const outPut = prices.find((product) => product.price == productprice);
+       return outPut;
+
+
+       }; 
+
+       console.log(getByPrice(500))
+
+
+
+
+       function employee (){
+        let emp =[];
+        setTimeout(() =>{
+            emp =  [
+            {name : 'Ali', id : 2},
+            {name : 'Ahmad', id : 3},
+            {name : 'khan', id : 2},
+            {name : 'Shah' , id : 4 },
+        ];
+       },1000);
+
+       return emp;
+
+        };
+
+        function getbyid (empId){
+            const ids = employee();
+            const givenId = ids.find((e) => e.id === empId );
+            return givenId;
+        }
+
+        console.log(getbyid(2))
+       
+
+
+
+    // function getUser(){
+    //     return new Promise((resolve , reject) => {
+    //         setTimeout(() => {
+    //             resolve([
+    //                 {userName : 'Ali', age : 20},
+    //                 {userName : 'Bilal', age :15}
+    //             ]);
+    //         },2000)
+    //     });
+    // };
+
+    // const promise = getUser();
+    // promise.then((user) => {
+    //     console.log(user);
+    // });
+
+
+    let success = false;
+    function getUser () {
+        return new Promise ((resolve , reject) => {
+            setTimeout(() => {
+                if(success){
+                    resolve([
+                        {userName : 'abc', age : 6},
+                        {userName : 'xyz', age : 8}
+                    ]);
+                }else{
+                    reject('faild to get users')
+                }
+            }, 2000);
+        });
+    }
+
+    function onFullFill (users){
+        console.log(users);
+    };
+    function onReject (error){
+        console.log (error)
+    };
+     
+     getUser()
+     .then(onFullFill)
+     .catch(onReject)
+
+
+
+    </script>
+</body>
+</html>

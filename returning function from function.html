@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jobs(descreption){
+            switch(descreption){
+                case 'frontend':
+                    return function(name){
+                        console.log(`Hi ${name} you need to learn Angular`);
+                    }
+                    break;
+                    case 'backend':
+                        return function(name){
+                            console.log(`Hi ${name} you need to learn Nodejs`);
+                        }
+                        break;
+                        default:
+                            return function(name){
+                                console.log(`Hi ${name} sorry but we have no suggestions for you `);
+                            }
+                    
+            }
+        }
+
+        let frontend = jobs("frontend");
+        frontend('Uzair');
+        jobs('backend')('Sarmad');
+        jobs('SQA')('Ali');
+    
+    </script>
+</body>
+</html>

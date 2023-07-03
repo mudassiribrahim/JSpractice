@@ -1,0 +1,62 @@
+<script>
+    // class classWithStatic{
+    //     static name;
+    //     static fullName = 'M ibrahim';
+    //     static staticMethod(){
+    //         console.log("iam static method");
+    //     }
+    // }
+    // classWithStatic.staticMethod();
+
+
+
+//     class Student  
+//   {  
+//     constructor()  
+//     {  
+//        var name;  
+//        var marks;  
+//     }  
+//         getName()  
+//         {  
+//           return this.name;  
+//         }  
+//       setName(name)  
+//       {  
+//         this.name=name;  
+//       }  
+        
+//       getMarks()  
+//       {  
+//         return this.marks;  
+//       }  
+//     setMarks(marks)  
+//     {  
+//         if(marks<0||marks>100)  
+//         {  
+//           alert("Invalid Marks");  
+//         }  
+//       else  
+//         {  
+//           this.marks=marks;  
+//         }  
+//     }  
+//     }  
+//     var stud=new Student();  
+//      stud.setName("John");  
+//      //stud.setMarks(110);//alert() invokes  
+//      //stud.marks = 80;
+//      console.log(stud.getName()+" "+stud.getMarks()); 
+     
+     
+
+     let person = function (name, age, email) {
+    this._name = name ;
+    this.age = age;
+    this.emial = email;
+}
+let pr = new person("syed",12,"syed.abideen@gmail.com")
+pr.name = "ssa"
+pr.age=21;
+console.log(pr)
+</script>
