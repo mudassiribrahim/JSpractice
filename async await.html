@@ -1,56 +1,56 @@
 <script>
-// async function greeting(){
-//     return 'hello';
-// }
+async function greeting(){
+    return 'hello';
+}
 
-// greeting().then(console.log);
-
-
-
-// async function myName(){
-//     return new Promise(function(resolve, reject){
-//       resolve("mudassir");
-//     });
-// }
-
-// myName().then(console.log);
+greeting().then(console.log);
 
 
-// function getUser(userId){
-//     return new Promise((resolve , reject)=>{
-//         console.log('Get user from Database');
-//         setTimeout(()=>{
-//             resolve({
-//                 id : userId,
-//                 userName : "Mudassir"
-//             })
-//         },1000)
-//     })
 
-// }
+async function myName(){
+    return new Promise(function(resolve, reject){
+      resolve("mudassir");
+    });
+}
 
-// function getService(user){
-//     return new Promise((resolve,reject)=>{
-//         console.log(`get services of ${user.userName} from Api`);
-//         setTimeout(()=>{
-//             resolve(['Gmail','youtube','insta']);
-//         },2000)
-//     })
-// }
-// function getCost (services){
-// return new Promise ((resolve,reject)=>{
-//     console.log(`cost of the ${services} is`);
-//     setTimeout(()=>{
-//         resolve(services.length*100);
-//     },2000)
-// });
-// }
-// async function showcost(){
-//     let user = await getUser(90);
-//     let services = await getService(user);
-//     let cost = await getCost(services);
-//     console.log(`The service cost is ${cost}`);
-// }
+myName().then(console.log);
 
-// showcost();
+
+function getUser(userId){
+    return new Promise((resolve , reject)=>{
+        console.log('Get user from Database');
+        setTimeout(()=>{
+            resolve({
+                id : userId,
+                userName : "Mudassir"
+            })
+        },1000)
+    })
+
+}
+
+function getService(user){
+    return new Promise((resolve,reject)=>{
+        console.log(`get services of ${user.userName} from Api`);
+        setTimeout(()=>{
+            resolve(['Gmail','youtube','insta']);
+        },2000)
+    })
+}
+function getCost (services){
+return new Promise ((resolve,reject)=>{
+    console.log(`cost of the ${services} is`);
+    setTimeout(()=>{
+        resolve(services.length*100);
+    },2000)
+});
+}
+async function showcost(){
+    let user = await getUser(90);
+    let services = await getService(user);
+    let cost = await getCost(services);
+    console.log(`The service cost is ${cost}`);
+}
+
+showcost();
 </script>
